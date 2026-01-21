@@ -22,7 +22,7 @@
         <!-- swiper js -->
         <link rel="stylesheet" href="../dist/main.css">
     </head>
-    <body>
+    <>
         <header class = "bg-header-image bg-cover bg-center bg-no-repeat min-h-screen flex flex-col overflow-hidden">
             <div class = "header-top bg-eerie-black min-h-[48px] flex items-center font-barlow py-3">
                 <div class="container max-w-[1200px] mx-auto lg:flex lg:justify-between">
@@ -105,24 +105,67 @@
                             method="GET"
                             >
 
+                        <div class="flex items-center justify-between px-3 py-4 border-[1px]">
+                            <input type="date"
+                                name="checkin"
+                                id="checkin"
+                                class="text-sm outline-none border-none w-full uppercase text-eerie-black cursor-pointer">
+                            
+                            <span class="cursor-pointer" onclick="openCalendar()">
+                                <img src="../assets/images/icons/calendar.svg" alt="Calendar">
+                            </span>
+                        </div>
 
-                            <div class="flex items-center justify-between px-3 py-4 border-[1px]">
-                                <input type="date"
-                                    name="checkin"
-                                    class="text-sm outline-none border-none w-full uppercase text-eerie-black">
-                                <span>
-                                    <img src="../assets/images/icons/calendar.svg">
-                                </span>
-                            </div>
+                        <script>
+                            const checkin = document.getElementById('checkin');
 
-                            <div class="flex items-center justify-between px-3 py-4 border-[1px]">
-                                <input type="date"
-                                    name="checkout"
-                                    class="text-sm outline-none border-none w-full uppercase text-eerie-black">
-                                <span>
-                                    <img src="../assets/images/icons/calendar.svg">
-                                </span>
-                            </div>
+                            // set today as default
+                            const today = new Date().toISOString().split('T')[0];
+                            checkin.value = today;
+                            checkin.min = today;
+
+                            // open calendar when icon is clicked
+                            function openCalendar() {
+                                checkin.showPicker(); // modern browsers
+                            }
+                        </script>
+
+     
+                        <div class="flex items-center justify-between px-3 py-4 border-[1px]">
+                            <input type="date"
+                                name="checkout"
+                                id="checkout"
+                                class="text-sm outline-none border-none w-full uppercase text-eerie-black cursor-pointer">
+                            
+                            <span class="cursor-pointer" onclick="openCheckoutCalendar()">
+                                <img src="../assets/images/icons/calendar.svg" alt="Calendar">
+                            </span>
+                        </div>
+
+                        <script>
+                            const checkout = document.getElementById('checkout');
+
+                            // get day after tomorrow
+                            const dayAfterTomorrow = new Date();
+                            dayAfterTomorrow.setDate(dayAfterTomorrow.getDate() + 2);
+
+                            const checkoutDate = dayAfterTomorrow.toISOString().split('T')[0];
+
+                            // set default + minimum
+                            checkout.value = checkoutDate;
+                            checkout.min = checkoutDate;
+
+                            // open calendar when icon is clicked
+                            function openCheckoutCalendar() {
+                                if (checkout.showPicker) {
+                                    checkout.showPicker();
+                                } else {
+                                    checkout.focus();
+                                    checkout.click();
+                                }
+                            }
+                        </script>
+
 
                             <div class="px-2 py-4 border-[1px]">
                                 <select class="min-w-full uppercase text-eerie-black outline-none">
@@ -156,33 +199,96 @@
             </div>
         </header>
 
-        <section class = "bg-nero min-h-[640px] mx-auto px-3 flex items-center py-16">
-            <div class="container max-w-[1200px] mx-auto grid md:grid-cols-2 gap-14">
-                <div class = "flex flex-col justify-center items-start">
-                    <h3 class = "text-coyote font-medium opacity-70 tracking-[.25em] font-barlow-cond text-xl sm:text-[22px] uppercase">welcome to</h3>
-                    <h1 class = "font-gilda text-2xl sm:text-[38px] tracking-[.04em] font-medium py-3 text-white mb-3">CrystalFall Hotel</h1>
-                    <p class = "opacity-60 font-light font-barlow text-justify text-base sm:text-lg text-white">Located on Street 2 of Lakeside, Pokhara, Crystal Fall Hotel offers a serene escape in the heart of Nepal’s most picturesque city. Surrounded by breathtaking views of Phewa Lake and the majestic Annapurna range, the Hotel combines modern luxury with the charm of nature. Enjoy world-class comfort, exceptional service, and an unforgettable experience where every moment feels like a getaway.</p>
-                    <a href = "#" class = "bg-lion font-barlow px-4 min-w-[158px] min-h-[48px] inline-flex items-center justify-center uppercase text-white transition duration-300 ease-in-out hover:bg-lion-dark mt-8 tracking-widest">know more</a>
-                </div>
-                    <div class="w-full overflow-hidden relative">
-                    <div id="slider" class="flex transition-transform duration-500">
-                        <div class="h-[425px] flex-shrink-0 w-full">
-                        <img class="w-full h-full object-cover" src="../assets/images/htl1.png" alt="welcome image">
-                        </div>
-                        <div class="h-[425px] flex-shrink-0 w-full">
-                        <img class="w-full h-full object-cover" src="../assets/images/wlc4.png" alt="welcome image">
-                        </div>
-                        <div class="h-[425px] flex-shrink-0 w-full">
-                        <img class="w-full h-full object-cover" src="../assets/images/welcome-img-3.png" alt="welcome image">
-                        </div>
-                    </div>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CrystalFall Hotel Gallery</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        </head>
+        <body class="bg-nero">
 
-                    <button id="prev" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded shadow">Prev</button>
-                    <button id="next" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded shadow">Next</button>
-                    </div>
+        <!-- ====== Section ====== -->
+        <section class="bg-nero min-h-[640px] mx-auto px-3 flex items-center py-16">
+        <div class="container max-w-[1200px] mx-auto grid md:grid-cols-2 gap-14">
+            
+            <!-- Text Content -->
+            <div class="flex flex-col justify-center items-start">
+            <h3 class="text-coyote font-medium opacity-70 tracking-[.25em] font-barlow-cond text-xl sm:text-[22px] uppercase">welcome to</h3>
+            <h1 class="font-gilda text-2xl sm:text-[38px] tracking-[.04em] font-medium py-3 text-white mb-3">CrystalFall Hotel</h1>
+            <p class="opacity-60 font-light font-barlow text-justify text-base sm:text-lg text-white">
+                Located on Street 2 of Lakeside, Pokhara, Crystal Fall Hotel offers a serene escape in the heart of Nepal’s most picturesque city. Surrounded by breathtaking views of Phewa Lake and the majestic Annapurna range, the Hotel combines modern luxury with the charm of nature. Enjoy world-class comfort, exceptional service, and an unforgettable experience where every moment feels like a getaway.
+            </p>
+            <a href="#" class="bg-lion font-barlow px-4 min-w-[158px] min-h-[48px] inline-flex items-center justify-center uppercase text-white transition duration-300 ease-in-out hover:bg-lion-dark mt-8 tracking-widest">know more</a>
             </div>
+            
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-3 gap-4">
+            <img class="w-full h-[425px] flex-shrink-0 w-full object-cover cursor-pointer popup-img rounded-md shadow-lg" src="../assets/images/htl1.png" alt="Image 2">
+            <img class="w-full h-[425px] flex-shrink-0 w-full object-cover cursor-pointer popup-img rounded-md shadow-lg" src="../assets/images/wlc4.png" alt="Image 2">
+            <img class="w-full h-[425px] flex-shrink-0 w-full object-cover cursor-pointer popup-img rounded-md shadow-lg" src="../assets/images/welcome-img-3.png" alt="Image 2">
+            </div>
+            
+        </div>
         </section>
 
+        <!-- ====== Lightbox Popup ====== -->
+        <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden z-50">
+        <span id="close-lightbox" class="absolute top-5 right-5 text-white text-3xl cursor-pointer">&times;</span>
+        <button id="prev-btn" class="absolute left-5 text-white text-4xl cursor-pointer">&larr;</button>
+        <img id="lightbox-img" class="max-w-[90%] max-h-[90%] object-contain rounded-md shadow-lg" src="" alt="popup image">
+        <button id="next-btn" class="absolute right-5 text-white text-4xl cursor-pointer">&rarr;</button>
+        </div>
+
+        <!-- ====== JS ====== -->
+        <script>
+        const images = document.querySelectorAll('.popup-img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.getElementById('close-lightbox');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        let currentIndex = 0;
+
+        // Open lightbox
+        images.forEach((img, index) => {
+            img.addEventListener('click', () => {
+            currentIndex = index;
+            lightbox.classList.remove('hidden');
+            lightboxImg.src = images[currentIndex].src;
+            });
+        });
+
+        // Close lightbox
+        closeBtn.addEventListener('click', () => {
+            lightbox.classList.add('hidden');
+        });
+
+        lightbox.addEventListener('click', e => {
+            if (e.target === lightbox) lightbox.classList.add('hidden');
+        });
+
+        // Next image
+        nextBtn.addEventListener('click', e => {
+            e.stopPropagation();
+            currentIndex = (currentIndex + 1) % images.length;
+            lightboxImg.src = images[currentIndex].src;
+        });
+
+        // Previous image
+        prevBtn.addEventListener('click', e => {
+            e.stopPropagation();
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            lightboxImg.src = images[currentIndex].src;
+        });
+
+        // Keyboard support
+        document.addEventListener('keydown', e => {
+            if (!lightbox.classList.contains('hidden')) {
+            if (e.key === 'ArrowRight') nextBtn.click();
+            if (e.key === 'ArrowLeft') prevBtn.click();
+            if (e.key === 'Escape') closeBtn.click();
+            }
+        });
+        </script>
 
 
         <section class = "min-h-[600px] py-16 flex flex-col items-center justify-center bg-banner-image bg-center bg-cover bg-fixed bg-no-repeat px-3">
