@@ -62,7 +62,7 @@
                 <div class="container max-w-[1200px] mx-auto flex flex-col">
                     <nav class = "py-5 md:flex md:justify-between">
                         <div class = "flex justify-between">
-                            <a href = "#" class = "font-gilda text-[28px] font-normal text-lion">Crystal<span class = "text-white">Fall.</span></a>
+                            <a href = "#" class = "font-gilda text-[28px] font-medium text-lion">Crystal<span class = "text-white">Fall.</span></a>
                             <button type = "button" class = "text-white md:hidden" id = "navbar-show-btn">
                                 <i class = 'fas fa-bars'></i>
                             </button>
@@ -96,8 +96,8 @@
                         </div>
                     </nav>
                     <div class="flex-1 flex items-center justify-stretch flex-col text-center py-12">
-                        <h1 class = "text-2xl xs:text-[32px] text-white font-gilda tracking-[.04em] uppercase font-normal max-w-[800px] md:text-[42px]">An upcoming vacation gives us something to eagerly anticipate.</h1>
-                        <a href = "#" class = "min-w-[158px] min-h-[48px] bg-transparent uppercase text-white border-2 font-barlow tracking-widest text-base font-normal inline-flex items-center justify-center mt-9 md:mt-[60px] hover:bg-white hover:text-black transition duration-300 ease-in-out">know more</a>
+                        <h1 class = "text-2xl xs:text-[32px] text-white font-gilda tracking-[.04em] uppercase font-medium max-w-[800px] md:text-[42px]">An upcoming vacation gives us something to eagerly anticipate.</h1>
+                        <a href = "#" class = "min-w-[158px] min-h-[48px] bg-transparent uppercase text-white border-2 font-barlow tracking-widest text-base font-medium inline-flex items-center justify-center mt-9 md:mt-[60px] hover:bg-white hover:text-black transition duration-300 ease-in-out">know more</a>
 
                         <form 
                             class="font-barlow mt-16 bg-white w-full grid sm:grid-cols-2 lg:grid-cols-6"
@@ -159,8 +159,8 @@
         <section class = "bg-nero min-h-[640px] mx-auto px-3 flex items-center py-16">
             <div class="container max-w-[1200px] mx-auto grid md:grid-cols-2 gap-14">
                 <div class = "flex flex-col justify-center items-start">
-                    <h3 class = "text-coyote font-normal opacity-70 tracking-[.25em] font-barlow-cond text-xl sm:text-[22px] uppercase">welcome to</h3>
-                    <h1 class = "font-gilda text-2xl sm:text-[38px] tracking-[.04em] font-normal py-3 text-white mb-3">CrystalFall Hotel</h1>
+                    <h3 class = "text-coyote font-medium opacity-70 tracking-[.25em] font-barlow-cond text-xl sm:text-[22px] uppercase">welcome to</h3>
+                    <h1 class = "font-gilda text-2xl sm:text-[38px] tracking-[.04em] font-medium py-3 text-white mb-3">CrystalFall Hotel</h1>
                     <p class = "opacity-60 font-light font-barlow text-justify text-base sm:text-lg text-white">Located on Street 2 of Lakeside, Pokhara, Crystal Fall Hotel offers a serene escape in the heart of Nepal’s most picturesque city. Surrounded by breathtaking views of Phewa Lake and the majestic Annapurna range, the Hotel combines modern luxury with the charm of nature. Enjoy world-class comfort, exceptional service, and an unforgettable experience where every moment feels like a getaway.</p>
                     <a href = "#" class = "bg-lion font-barlow px-4 min-w-[158px] min-h-[48px] inline-flex items-center justify-center uppercase text-white transition duration-300 ease-in-out hover:bg-lion-dark mt-8 tracking-widest">know more</a>
                 </div>
@@ -537,15 +537,72 @@
             </div>
         </section>
 
+
+        <section class="py-16 px-3 bg-light-gray">
+            <div class="container max-w-[1200px] mx-auto">
+                <h2 class="font-gilda font-medium text-3xl sm:text-[42px] tracking-[.04em] text-coyote text-center mb-3">
+                    MENU
+                </h2>
+
+                 <div class="flex items-center justify-center">
+                    <img src = "../assets/images/decorated-pattern-2.svg" alt = "">
+                </div>
+
+                            <div class="container max-w-[1200px] mx-auto grid md:grid-cols-2 gap-14">
+                <div class = "flex flex-col justify-center items-start">
+                    <h3 class = "text-coyote font-normal opacity-70 tracking-[.25em] font-barlow-cond text-xl sm:text-[22px] uppercase">Discover</h3>
+                    <h1 class = "font-gilda text-2xl sm:text-[38px] tracking-[.04em] font-normal py-3 text-black mb-3">Our Menu</h1>
+                    <br class = "opacity-60 font-light font-barlow text-justify text-base sm:text-lg text-black"> Indulge in a culinary journey featuring fresh, local ingredients and a variety of international and traditional Nepali dishes. From gourmet breakfasts to elegant dinners, our menu is designed to delight every palate. Enjoy a memorable dining experience in a cozy and stylish ambiance, paired with exceptional service. In addition to serving great food, our Hungry Eye Restaurant also hosts a live cultural program every evening from 7 pm till 9 pm, which consistently delivers a truly memorable dining experience.
+                </div>
+                    <div class="w-full overflow-hidden relative">
+                    <div id="slider" class="flex transition-transform duration-500">
+                        <div class="h-[425px] flex-shrink-0 w-full">
+                        <img class="w-full h-full object-cover" src="../assets/images/welcome-img-1.png" alt="welcome image">
+                        </div>
+                    
+                    </div>
+
+                    <button id="prev" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black p-2 rounded shadow">Prev</button>
+                    <button id="next" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black p-2 rounded shadow">Next</button>
+                    </div>
+            </div>
+
+                <div class = "grid mt-10 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 lg:gap-10">
+                    <a href = "#" class = "transition duration-300 ease-in-out hover:-translate-y-5">
+                        <div class = "min-h-[400px]">
+                            <img src = "../assets/images/menu1.png" class = "w-full h-full object-cover" alt = "">
+                        </div>
+                    </a>
+
+
+                    <a href = "#" class = "transition duration-300 ease-in-out hover:-translate-y-5">
+                        <div class = "min-h-[400px]">
+                            <img src = "../assets/images/menu1.png" class = "w-full h-full object-cover" alt = "">
+                        </div>
+                    </a>
+
+                    <a href = "#" class = "transition duration-300 ease-in-out hover:-translate-y-5">
+                        <div class = "min-h-[400px]">
+                            <img src = "../assets/images/menu2.png" class = "w-full h-full object-cover" alt = "">
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+
+
         <section>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3515.8362550688385!2d83.95585190000001!3d28.2122871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399595cc29a4738b%3A0x67fd2bc5c2e4eaf2!2sHotel%20Crystal%20Fall!5e0!3m2!1sen!2snp!4v1768896572455!5m2!1sen!2snp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class = "min-h-[480px] w-full"></iframe>
         </section>
+
 
         <footer>
             <div class="bg-nero py-16 px-3">
                 <div class = "grid max-w-[1200px] mx-auto gap-8 text-center md:grid-cols-2 md:text-start lg:grid-cols-footer">
                     <div class = "md:me-2 lg:me-3">
-                        <a href = "index.html" class = "text-lion font-gilda font-normal text-2xl tracking-[.04em]">Crystal<span class = "text-white">Fall.</span></a>
+                        <a href = "index.html" class = "text-lion font-gilda font-medium text-2xl tracking-[.04em]">Crystal<span class = "text-white">Fall.</span></a>
                         <p class = "text-white font-light font-barlow text-base mt-3 max-w-[480px] mx-auto md:ms-0">Welcome to the best five-star deluxe hotel in Lakeside. Hotel elementum sesue the aucan vestibulum aliquam justo in sapien rutrum volutpat.</p>
                     </div>
 
@@ -610,7 +667,7 @@
                     </div>
                 </div>
             </div>
-            <div class = "py-4 text-white font-normal font-barlow uppercase text-center tracking-widest bg-nero-dark">
+            <div class = "py-4 text-white font-medium font-barlow uppercase text-center tracking-widest bg-nero-dark">
                 <p class = "text-sm">&copy; copyright 2026 CrystalFall. All rights reserved.</p>
         </footer>
 
