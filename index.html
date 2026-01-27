@@ -34,7 +34,7 @@
 
                         <div class = "flex py-1 md:ms-5 lg:ms-[72px]">
                             <img src = "../assets/images/icons/call-calling.svg" class = "w-3 mx-2" alt = "">
-                            <span class = "text-platinum opacity-60 font-light text-sm">+977-98000000</span>
+                            <span class = "text-platinum opacity-60 font-light text-sm">+977-9856044750</span>
                         </div>
                     </div>
                     
@@ -742,6 +742,18 @@
                             Experience luxury and comfort at Crystal Fall Hotel, where exceptional service meets breathtaking views. Your perfect stay in the heart of Pokhara awaits.                        </p>
                     </div>
 
+                    <meta property="og:title" content="CrystalFall Hotel | Luxury Stay & Comfort">
+                    <meta property="og:description" content="Experience luxury, comfort, and breathtaking views at CrystalFall Hotel. Book your perfect stay today.">
+                    <meta property="og:type" content="website">
+                    <meta property="og:url" content="https://www.crystalfallhotel.com">
+                    <meta property="og:image" content="https://www.crystalfallhotel.com/assets/images/og-image.jpg">
+
+                    <meta property="og:site_name" content="CrystalFall Hotel">
+
+                    <meta property="og:image:width" content="1200">
+                    <meta property="og:image:height" content="630">
+
+
                     <div>
                         <h4 class="inline-block font-gilda tracking-[.04em] text-lg text-white capitalize relative 
                                 after:absolute after:content-[''] after:left-0 after:-bottom-0 after:h-[1px] after:w-full after:bg-coyote 
@@ -779,7 +791,7 @@
                             </li>
                             <li class="my-2 grid grid-cols-[30px_auto] justify-center md:justify-start items-center">
                                 <i class="fas fa-phone text-white"></i>
-                                <span class="text-white/50 font-light">+977-98000000</span>
+                                <span class="text-white/50 font-light">+977-9856044750</span>
                             </li>
                             <li class="my-2 grid grid-cols-[30px_auto] justify-center md:justify-start items-center">
                                 <i class="fas fa-envelope text-white"></i>
@@ -795,6 +807,84 @@
                 <p class="text-sm">&copy; copyright 2026 CrystalFall. All rights reserved.</p>
             </div>
         </footer>
+
+        <button id="scrollTopBtn"
+            class="fixed bottom-24 right-6 bg-lion text-white p-3 rounded-full shadow-lg hidden z-50 transition hover:bg-lion-dark">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
+        <div id="whatsappContainer" class="fixed bottom-6 right-6 z-50">
+
+            <button id="whatsappBtn"
+                class="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition">
+                <i class="fab fa-whatsapp text-2xl"></i>
+            </button>
+
+            <div id="whatsappPopup"
+                class="hidden absolute bottom-16 right-0 w-72 bg-white rounded-lg shadow-xl overflow-hidden">
+
+                <div class="bg-green-500 text-white p-4">
+                    <h4 class="font-semibold">CrystalFall Hotel</h4>
+                    <p class="text-sm opacity-90">Typically replies within minutes</p>
+                </div>
+
+                <div class="p-4 text-sm text-gray-700">
+                    👋 Hi there!<br>
+                    How can we help you today?
+                </div>
+
+                <a href="https://wa.me/+977-9856044750
+                target="_blank"
+                class="block text-center bg-green-500 text-white py-3 hover:bg-green-600 transition">
+                    Chat on WhatsApp
+                </a>
+            </div>
+
+        </div>
+
+        <script>
+
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.remove('hidden');
+            } else {
+                scrollTopBtn.classList.add('hidden');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+
+        const whatsappBtn = document.getElementById('whatsappBtn');
+        const whatsappPopup = document.getElementById('whatsappPopup');
+
+        whatsappBtn.addEventListener('click', () => {
+            whatsappPopup.classList.toggle('hidden');
+        });
+
+
+        let lastScrollY = window.scrollY;
+        const floatingElements = document.getElementById('whatsappContainer');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY) {
+                floatingElements.style.opacity = '0';
+                floatingElements.style.pointerEvents = 'none';
+            } else {
+                floatingElements.style.opacity = '1';
+                floatingElements.style.pointerEvents = 'auto';
+            }
+            lastScrollY = window.scrollY;
+        });
+        </script>
+
 
 
         <!-- jquery cdn -->
