@@ -119,102 +119,135 @@
                         <h1 class = "text-2xl xs:text-[32px] text-white font-gilda tracking-[.04em] uppercase font-medium max-w-[800px] md:text-[42px]">An upcoming vacation gives us something to eagerly anticipate.</h1>
                         <a href = "#" class = "min-w-[158px] min-h-[48px] bg-transparent uppercase text-white border-2 font-barlow tracking-widest text-base font-medium inline-flex items-center justify-center mt-9 md:mt-[60px] hover:bg-white hover:text-black transition duration-300 ease-in-out">know more</a>
 
-                    <form 
-                        class="font-barlow mt-16 bg-white w-full grid sm:grid-cols-2 lg:grid-cols-6 gap-3"
-                        action="https://www.booking.com/hotel/np/crystal-fall-pokhara2.html"
-                        method="GET">
+<form 
+    class="font-barlow mt-16 bg-white w-full grid sm:grid-cols-2 lg:grid-cols-6 gap-3"
+    action="https://www.booking.com/hotel/np/crystal-fall-pokhara2.html"
+    method="GET">
 
-                        <!-- Checkin & Checkout Row -->
-                        <div class="flex flex-col sm:flex-row gap-3 mb-3 sm:col-span-2 lg:col-span-2">
-                            <!-- Checkin Input -->
-                            <div class="flex-1 flex items-center justify-between px-3 py-4 border-[1px] rounded-md">
-                                <input
-                                    type="date"
-                                    name="checkin"
-                                    id="checkin"
-                                    class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer"
-                                >
-                                <span class="cursor-pointer" onclick="openCheckinCalendar()">
-                                    <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
-                                </span>
-                            </div>
+    <!-- Checkin & Checkout Row for Mobile Only -->
+    <div class="flex gap-3 mb-3 sm:hidden">
+        <!-- Checkin Input -->
+        <div class="flex-1 flex items-center justify-between px-3 py-4 border-[1px] rounded-md">
+            <input
+                type="date"
+                name="checkin"
+                id="checkin"
+                class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer"
+            >
+            <span class="cursor-pointer" onclick="openCheckinCalendar()">
+                <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
+            </span>
+        </div>
 
-                            <!-- Checkout Input -->
-                            <div class="flex-1 flex items-center justify-between px-3 py-4 border-[1px] rounded-md">
-                                <input
-                                    type="date"
-                                    name="checkout"
-                                    id="checkout"
-                                    class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer"
-                                >
-                                <span class="cursor-pointer" onclick="openCheckoutCalendar()">
-                                    <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
-                                </span>
-                            </div>
-                        </div>
+        <!-- Checkout Input -->
+        <div class="flex-1 flex items-center justify-between px-3 py-4 border-[1px] rounded-md">
+            <input
+                type="date"
+                name="checkout"
+                id="checkout"
+                class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer"
+            >
+            <span class="cursor-pointer" onclick="openCheckoutCalendar()">
+                <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
+            </span>
+        </div>
+    </div>
 
-                        <!-- Adult Select -->
-                        <div class="px-2 py-4 border-[1px]">
-                            <select class="min-w-full uppercase text-eerie-black outline-none">
-                                <option disabled selected>adult</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                            </select>
-                        </div>
+    <!-- Checkin Input for Desktop -->
+    <div class="hidden sm:flex sm:flex-col mb-3 sm:col-span-1 lg:col-span-1">
+        <div class="flex-1 flex items-center justify-between px-3 py-4 border-[1px] rounded-md">
+            <input
+                type="date"
+                name="checkin"
+                id="checkinDesktop"
+                class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer"
+            >
+            <span class="cursor-pointer" onclick="openCheckinCalendar()">
+                <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
+            </span>
+        </div>
+    </div>
 
-                        <!-- Children Select -->
-                        <div class="px-2 py-4 border-[1px]">
-                            <select class="min-w-full uppercase text-eerie-black outline-none">
-                                <option disabled selected>children</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                            </select>
-                        </div>
+    <!-- Checkout Input for Desktop -->
+    <div class="hidden sm:flex sm:flex-col mb-3 sm:col-span-1 lg:col-span-1">
+        <div class="flex-1 flex items-center justify-between px-3 py-4 border-[1px] rounded-md">
+            <input
+                type="date"
+                name="checkout"
+                id="checkoutDesktop"
+                class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer"
+            >
+            <span class="cursor-pointer" onclick="openCheckoutCalendar()">
+                <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
+            </span>
+        </div>
+    </div>
 
-                        <!-- Room Select -->
-                        <div class="px-2 py-4 border-[1px]">
-                            <select class="min-w-full uppercase text-eerie-black outline-none">
-                                <option selected>1 room</option>
-                                <option>2 room</option>
-                                <option>3 room</option>
-                            </select>
-                        </div>
+    <!-- Adult Select -->
+    <div class="px-2 py-4 border-[1px]">
+        <select class="min-w-full uppercase text-eerie-black outline-none">
+            <option disabled selected>adult</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+    </div>
 
-                        <!-- Submit Button -->
-                        <button
-                            type="submit"
-                            class="w-full bg-lion font-barlow px-4 min-h-[56px] inline-flex items-center justify-center uppercase text-white transition duration-300 ease-in-out hover:bg-lion-dark tracking-widest rounded">
-                            Check Now
-                        </button>
+    <!-- Children Select -->
+    <div class="px-2 py-4 border-[1px]">
+        <select class="min-w-full uppercase text-eerie-black outline-none">
+            <option disabled selected>children</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+    </div>
 
-                    </form>
+    <!-- Room Select -->
+    <div class="px-2 py-4 border-[1px]">
+        <select class="min-w-full uppercase text-eerie-black outline-none">
+            <option selected>1 room</option>
+            <option>2 room</option>
+            <option>3 room</option>
+        </select>
+    </div>
 
-                    <script>
-                        const checkin = document.getElementById('checkin');
-                        const checkout = document.getElementById('checkout');
+    <!-- Submit Button -->
+    <button
+        type="submit"
+        class="w-full bg-lion font-barlow px-4 min-h-[56px] inline-flex items-center justify-center uppercase text-white transition duration-300 ease-in-out hover:bg-lion-dark tracking-widest rounded">
+        Check Now
+    </button>
 
-                        // Set today as default for checkin
-                        const today = new Date().toISOString().split('T')[0];
-                        checkin.value = today;
-                        checkin.min = today;
+</form>
 
-                        // Set tomorrow as default for checkout
-                        const tomorrow = new Date();
-                        tomorrow.setDate(tomorrow.getDate() + 1);
-                        const tomorrowStr = tomorrow.toISOString().split('T')[0];
-                        checkout.value = tomorrowStr;
-                        checkout.min = tomorrowStr;
+<script>
+    const checkin = document.getElementById('checkin');
+    const checkout = document.getElementById('checkout');
 
-                        function openCheckinCalendar() {
-                            checkin.showPicker();
-                        }
+    // Set today as default for checkin
+    const today = new Date().toISOString().split('T')[0];
+    checkin.value = today;
+    checkin.min = today;
 
-                        function openCheckoutCalendar() {
-                            checkout.showPicker();
-                        }
-                    </script>
+    // Set tomorrow as default for checkout
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const tomorrowStr = tomorrow.toISOString().split('T')[0];
+    checkout.value = tomorrowStr;
+    checkout.min = tomorrowStr;
+
+    function openCheckinCalendar() {
+        checkin.showPicker();
+    }
+
+    function openCheckoutCalendar() {
+        checkout.showPicker();
+    }
+</script>
+
+
+
                     </div>
                 </div>
             </div>
