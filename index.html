@@ -151,17 +151,22 @@
                         </script>
 
      
-                    <div class="flex items-center justify-between px-3 py-4 border-[1px] rounded-md mb-3"> 
-                        <input 
-                            type="date" 
-                            name="checkout" 
-                            id="checkout" 
-                            class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer"
-                        > 
-                        <span class="cursor-pointer" onclick="openCheckoutCalendar()"> 
-                            <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
-                        </span> 
-                    </div>
+<div class="flex flex-col sm:flex-row items-center sm:justify-between px-3 py-4 border-[1px] rounded-md mb-3 gap-2">
+    <!-- Checkout input -->
+    <input 
+        type="date" 
+        name="checkout" 
+        id="checkout" 
+        class="w-full sm:flex-1 text-sm text-eerie-black outline-none border-none cursor-pointer px-2 py-2 rounded-md"
+        placeholder="Check-out"
+    >
+
+    <!-- Calendar button -->
+    <button type="button" onclick="openCheckoutCalendar()" 
+            class="w-full sm:w-auto flex items-center justify-center px-3 py-2 bg-lion text-white rounded-md hover:bg-lion-dark transition">
+        <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
+    </button>
+</div>
 
 
 
