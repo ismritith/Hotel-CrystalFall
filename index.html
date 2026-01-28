@@ -124,63 +124,64 @@
                             action="https://www.booking.com/hotel/np/crystal-fall-pokhara2.html"
                             method="GET">
 
-                        <div class="flex items-center justify-between px-3 py-4 border-[1px] rounded-md mb-3">
-                            <input 
-                                type="date" 
-                                name="checkin" 
-                                id="checkin" 
-                                class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer"
-                            > 
-                            <span class="cursor-pointer" onclick="openCheckinCalendar()"> 
-                                <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
-                            </span> 
-                        </div>
+<!-- Checkin & Checkout Row -->
+<div class="flex gap-3 mb-3">
 
-                        <script>
-                            const checkin = document.getElementById('checkin');
+    <!-- Checkin Input -->
+    <div class="flex-1 flex items-center justify-between px-3 py-4 border-[1px] rounded-md">
+        <input
+            type="date"
+            name="checkin"
+            id="checkin"
+            class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer"
+        >
+        <span class="cursor-pointer" onclick="openCheckinCalendar()">
+            <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
+        </span>
+    </div>
 
-                            // set today as default
-                            const today = new Date().toISOString().split('T')[0];
-                            checkin.value = today;
-                            checkin.min = today;
+    <!-- Checkout Input -->
+    <div class="flex-1 flex items-center justify-between px-3 py-4 border-[1px] rounded-md">
+        <input
+            type="date"
+            name="checkout"
+            id="checkout"
+            class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer"
+        >
+        <span class="cursor-pointer" onclick="openCheckoutCalendar()">
+            <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
+        </span>
+    </div>
 
-                            // open calendar when icon is clicked
-                            function openCalendar() {
-                                checkin.showPicker(); // modern browsers
-                            }
-                        </script>
+</div>
 
+<script>
+    const checkin = document.getElementById('checkin');
+    const checkout = document.getElementById('checkout');
+
+    // Set today as default for checkin
+    const today = new Date().toISOString().split('T')[0];
+    checkin.value = today;
+    checkin.min = today;
+
+    // Set tomorrow as default for checkout
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const tomorrowStr = tomorrow.toISOString().split('T')[0];
+    checkout.value = tomorrowStr;
+    checkout.min = tomorrowStr;
+
+    function openCheckinCalendar() {
+        checkin.showPicker();
+    }
+
+    function openCheckoutCalendar() {
+        checkout.showPicker();
+    }
+</script>
+
+ 
      
-                    <!-- Checkout Input -->
-                    <div class="flex items-center justify-between px-3 py-4 border-[1px] rounded-md mb-3">
-                        <input 
-                            type="date" 
-                            name="checkout" 
-                            id="checkout" 
-                            class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer"
-                        > 
-                        <span class="cursor-pointer" onclick="openCheckoutCalendar()"> 
-                            <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
-                        </span> 
-                    </div>
-
-                    <script>
-                        const checkout = document.getElementById('checkout');
-
-                        // Set default checkout date to tomorrow
-                        const tomorrow = new Date();
-                        tomorrow.setDate(tomorrow.getDate() + 1); // adds 1 day
-                        const tomorrowStr = tomorrow.toISOString().split('T')[0];
-
-                        checkout.value = tomorrowStr; // default value
-                        checkout.min = tomorrowStr;   // minimum selectable date
-
-                        function openCheckoutCalendar() {
-                            checkout.showPicker(); // opens calendar in modern browsers
-                        }
-                    </script>
-
-
 
 
                             <div class="px-2 py-4 border-[1px]">
