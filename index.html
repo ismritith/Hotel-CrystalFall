@@ -151,43 +151,36 @@
                         </script>
 
      
-                        <div class="flex items-center justify-between px-3 py-4 border-[1px] rounded-md mb-3">
-                            <input 
-                                type="date" 
-                                name="checkout" 
-                                id="checkout" 
-                                class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer"
-                            > 
-                            <span class="cursor-pointer" onclick="openCheckoutCalendar()"> 
-                                <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
-                            </span> 
-                        </div>
+                    <!-- Checkout Input -->
+                    <div class="flex items-center justify-between px-3 py-4 border-[1px] rounded-md mb-3">
+                        <input 
+                            type="date" 
+                            name="checkout" 
+                            id="checkout" 
+                            class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer"
+                        > 
+                        <span class="cursor-pointer" onclick="openCheckoutCalendar()"> 
+                            <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
+                        </span> 
+                    </div>
+
+                    <script>
+                        const checkout = document.getElementById('checkout');
+
+                        // Set default checkout date to tomorrow
+                        const tomorrow = new Date();
+                        tomorrow.setDate(tomorrow.getDate() + 1); // adds 1 day
+                        const tomorrowStr = tomorrow.toISOString().split('T')[0];
+
+                        checkout.value = tomorrowStr; // default value
+                        checkout.min = tomorrowStr;   // minimum selectable date
+
+                        function openCheckoutCalendar() {
+                            checkout.showPicker(); // opens calendar in modern browsers
+                        }
+                    </script>
 
 
-
-                        <script>
-                            const checkout = document.getElementById('checkout');
-
-                            // get day after tomorrow
-                            const dayAfterTomorrow = new Date();
-                            dayAfterTomorrow.setDate(dayAfterTomorrow.getDate() + 2);
-
-                            const checkoutDate = dayAfterTomorrow.toISOString().split('T')[0];
-
-                            // set default + minimum
-                            checkout.value = checkoutDate;
-                            checkout.min = checkoutDate;
-
-                            // open calendar when icon is clicked
-                            function openCheckoutCalendar() {
-                                if (checkout.showPicker) {
-                                    checkout.showPicker();
-                                } else {
-                                    checkout.focus();
-                                    checkout.click();
-                                }
-                            }
-                        </script>
 
 
                             <div class="px-2 py-4 border-[1px]">
