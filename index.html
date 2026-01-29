@@ -5,13 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>CrystalFall.</title>
         <meta name="description" content="">
-        <!-- google fonts -->
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Gilda+Display&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         
-        <!-- Open Graph Meta Tags -->
         <meta property="og:title" content="CrystalFall Hotel | Luxury Stay in Pokhara">
         <meta property="og:description" content="Experience luxury, comfort, and breathtaking views at CrystalFall Hotel, Lakeside Pokhara.">
         <meta property="og:type" content="website">
@@ -19,11 +18,9 @@
         <meta property="og:image" content="https://hotel-crystal-fall.vercel.app/assets/images/header-image.png">
         <meta property="og:site_name" content="CrystalFall Hotel">
 
-        <!-- Image size (recommended) -->
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="630">
 
-        <!-- Optional: Twitter Card -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="CrystalFall Hotel | Luxury Stay in Pokhara">
         <meta name="twitter:description" content="Luxury hotel in Lakeside Pokhara with lake & mountain views.">
@@ -31,16 +28,10 @@
 
 
 
-        <!-- font awesome cdn   -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- slick slider -->
-        <!-- Add the slick-theme.css if you want default styling -->
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-        <!-- Add the slick-theme.css if you want default styling -->
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-        <!-- date picker -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.css" integrity="sha512-YdYyWQf8AS4WSB0WWdc3FbQ3Ypdm0QCWD2k4hgfqbQbRCJBEgX0iAegkl2S1Evma5ImaVXLBeUkIlP6hQ1eYKQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- swiper js -->
         <link rel="stylesheet" href="../dist/main.css">
     </head>
         <header class = "bg-header-image bg-cover bg-center bg-no-repeat min-h-screen flex flex-col overflow-hidden">
@@ -119,136 +110,148 @@
                         <h1 class = "text-2xl xs:text-[32px] text-white font-gilda tracking-[.04em] uppercase font-medium max-w-[800px] md:text-[42px]">An upcoming vacation gives us something to eagerly anticipate.</h1>
                         <a href = "#" class = "min-w-[158px] min-h-[48px] bg-transparent uppercase text-white border-2 font-barlow tracking-widest text-base font-medium inline-flex items-center justify-center mt-9 md:mt-[60px] hover:bg-white hover:text-black transition duration-300 ease-in-out">know more</a>
 
-<form 
-    class="font-barlow mt-16 bg-white w-full grid sm:grid-cols-2 lg:grid-cols-6 gap-3"
-    action="https://www.booking.com/hotel/np/crystal-fall-pokhara2.html"
-    method="GET">
+                    <form 
+                        class="font-barlow mt-16 bg-white w-full grid sm:grid-cols-2 lg:grid-cols-6 gap-3"
+                        action="https://www.booking.com/hotel/np/crystal-fall-pokhara2.html"
+                        method="GET">
 
-    <!-- Checkin & Checkout Row for Mobile Only -->
-    <div class="flex gap-3 mb-3 sm:hidden">
-        <!-- Checkin Input -->
-        <div class="flex-1 flex items-center justify-between px-3 py-4 border-[1px] rounded-md">
-            <input
-                type="date"
-                name="checkin"
-                id="checkin"
-                class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer"
-            >
-            <span class="cursor-pointer" onclick="openCheckinCalendar()">
-                <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
-            </span>
-        </div>
+                        <!-- Checkin & Checkout Row for Mobile Only -->
+                        <div class="flex gap-3 mb-3 sm:hidden">
+                            <!-- Checkin Input -->
+                            <div class="flex-1 flex items-center justify-between px-3 py-4 border-[1px] rounded-md">
+                                <input
+                                    type="date"
+                                    name="checkin"
+                                    id="checkin"
+                                    class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer"
+                                >
+                                <span class="cursor-pointer" onclick="openCheckinCalendar()">
+                                    <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
+                                </span>
+                            </div>
 
-        <!-- Checkout Input -->
-        <div class="flex-1 flex items-center justify-between px-3 py-4 border-[1px] rounded-md">
-            <input
-                type="date"
-                name="checkout"
-                id="checkout"
-                class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer"
-            >
-            <span class="cursor-pointer" onclick="openCheckoutCalendar()">
-                <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
-            </span>
-        </div>
-    </div>
+                            <!-- Checkout Input -->
+                            <div class="flex-1 flex items-center justify-between px-3 py-4 border-[1px] rounded-md">
+                                <input
+                                    type="date"
+                                    name="checkout"
+                                    id="checkout"
+                                    class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer"
+                                >
+                                <span class="cursor-pointer" onclick="openCheckoutCalendar()">
+                                    <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
+                                </span>
+                            </div>
+                        </div>
 
-    <!-- Checkin Input for Desktop -->
-    <div class="hidden sm:flex sm:flex-col mb-3 sm:col-span-1 lg:col-span-1">
-        <div class="flex-1 flex items-center justify-between px-3 py-4 border-[1px] rounded-md">
-            <input
-                type="date"
-                name="checkin"
-                id="checkinDesktop"
-                class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer"
-            >
-            <span class="cursor-pointer" onclick="openCheckinCalendar()">
-                <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
-            </span>
-        </div>
-    </div>
+                        <!-- Checkin Input for Desktop -->
+                        <div class="hidden sm:flex sm:flex-col mb-3 sm:col-span-1 lg:col-span-1">
+                            <div class="flex-1 flex items-center justify-between px-3 py-4 border-[1px] rounded-md">
+                                <input
+                                    type="date"
+                                    name="checkin"
+                                    id="checkinDesktop"
+                                    class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer"
+                                >
+                                <span class="cursor-pointer" onclick="openCheckinCalendar()">
+                                    <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
+                                </span>
+                            </div>
+                        </div>
 
-    <!-- Checkout Input for Desktop -->
-    <div class="hidden sm:flex sm:flex-col mb-3 sm:col-span-1 lg:col-span-1">
-        <div class="flex-1 flex items-center justify-between px-3 py-4 border-[1px] rounded-md">
-            <input
-                type="date"
-                name="checkout"
-                id="checkoutDesktop"
-                class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer"
-            >
-            <span class="cursor-pointer" onclick="openCheckoutCalendar()">
-                <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
-            </span>
-        </div>
-    </div>
+                        <!-- Checkout Input for Desktop -->
+                        <div class="hidden sm:flex sm:flex-col mb-3 sm:col-span-1 lg:col-span-1">
+                            <div class="flex-1 flex items-center justify-between px-3 py-4 border-[1px] rounded-md">
+                                <input
+                                    type="date"
+                                    name="checkout"
+                                    id="checkoutDesktop"
+                                    class="w-full text-sm text-eerie-black outline-none border-none cursor-pointer"
+                                >
+                                <span class="cursor-pointer" onclick="openCheckoutCalendar()">
+                                    <img src="../assets/images/icons/calendar.svg" alt="Calendar" class="w-5 h-5">
+                                </span>
+                            </div>
+                        </div>
 
-    <!-- Adult Select -->
-    <div class="px-2 py-4 border-[1px]">
-        <select class="min-w-full uppercase text-eerie-black outline-none">
-            <option disabled selected>adult</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-        </select>
-    </div>
+                        <!-- Adult Select -->
+                        <div class="px-2 py-4 border-[1px]">
+                            <select class="min-w-full uppercase text-eerie-black outline-none">
+                                <option disabled selected>adult</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
 
-    <!-- Children Select -->
-    <div class="px-2 py-4 border-[1px]">
-        <select class="min-w-full uppercase text-eerie-black outline-none">
-            <option disabled selected>children</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-        </select>
-    </div>
+                        <!-- Children Select -->
+                        <div class="px-2 py-4 border-[1px]">
+                            <select class="min-w-full uppercase text-eerie-black outline-none">
+                                <option disabled selected>children</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
 
-    <!-- Room Select -->
-    <div class="px-2 py-4 border-[1px]">
-        <select class="min-w-full uppercase text-eerie-black outline-none">
-            <option selected>1 room</option>
-            <option>2 room</option>
-            <option>3 room</option>
-        </select>
-    </div>
+                        <!-- Room Select -->
+                        <div class="px-2 py-4 border-[1px]">
+                            <select class="min-w-full uppercase text-eerie-black outline-none">
+                                <option selected>1 room</option>
+                                <option>2 room</option>
+                                <option>3 room</option>
+                            </select>
+                        </div>
 
-    <!-- Submit Button -->
-    <button
-        type="submit"
-        class="w-full bg-lion font-barlow px-4 min-h-[56px] inline-flex items-center justify-center uppercase text-white transition duration-300 ease-in-out hover:bg-lion-dark tracking-widest rounded">
-        Check Now
-    </button>
+                        <!-- Submit Button -->
+                        <button
+                            type="submit"
+                            class="w-full bg-lion font-barlow px-4 min-h-[56px] inline-flex items-center justify-center uppercase text-white transition duration-300 ease-in-out hover:bg-lion-dark tracking-widest rounded">
+                            Check Now
+                        </button>
 
-</form>
+                    </form>
 
-<script>
-    const checkin = document.getElementById('checkin');
-    const checkout = document.getElementById('checkout');
+                <script>
+                    // Mobile inputs
+                    const checkin = document.getElementById('checkin');
+                    const checkout = document.getElementById('checkout');
 
-    // Set today as default for checkin
-    const today = new Date().toISOString().split('T')[0];
-    checkin.value = today;
-    checkin.min = today;
+                    // Desktop inputs
+                    const checkinDesktop = document.getElementById('checkinDesktop');
+                    const checkoutDesktop = document.getElementById('checkoutDesktop');
 
-    // Set tomorrow as default for checkout
-    const tomorrow = new Date();
-    tomorrow.setDate(tomorrow.getDate() + 1);
-    const tomorrowStr = tomorrow.toISOString().split('T')[0];
-    checkout.value = tomorrowStr;
-    checkout.min = tomorrowStr;
+                    // Set today as default check-in
+                    const today = new Date().toISOString().split('T')[0];
+                    if (checkin) checkin.value = today;
+                    if (checkinDesktop) checkinDesktop.value = today;
 
-    function openCheckinCalendar() {
-        checkin.showPicker();
-    }
+                    // Set tomorrow as default check-out
+                    const tomorrow = new Date();
+                    tomorrow.setDate(tomorrow.getDate() + 1);
+                    const tomorrowStr = tomorrow.toISOString().split('T')[0];
+                    if (checkout) checkout.value = tomorrowStr;
+                    if (checkoutDesktop) checkoutDesktop.value = tomorrowStr;
 
-    function openCheckoutCalendar() {
-        checkout.showPicker();
-    }
-</script>
+                    // Optional: set min dates so past dates can't be picked
+                    if (checkin) checkin.min = today;
+                    if (checkout) checkout.min = tomorrowStr;
+                    if (checkinDesktop) checkinDesktop.min = today;
+                    if (checkoutDesktop) checkoutDesktop.min = tomorrowStr;
+
+                    // Calendar picker functions
+                    function openCheckinCalendar() {
+                        checkin?.showPicker();
+                        checkinDesktop?.showPicker();
+                    }
+
+                    function openCheckoutCalendar() {
+                        checkout?.showPicker();
+                        checkoutDesktop?.showPicker();
+                    }
+                </script>
 
 
-
-                    </div>
                 </div>
             </div>
         </header>
@@ -259,11 +262,9 @@
         </head>
         <body class="bg-nero">
 
-        <!-- ====== Section ====== -->
         <section class="bg-nero min-h-[640px] mx-auto px-3 flex items-center py-16">
         <div class="container max-w-[1200px] mx-auto grid md:grid-cols-2 gap-14">
             
-            <!-- Text Content -->
             <div class="flex flex-col justify-center items-start">
             <h3 class="text-coyote font-medium opacity-70 tracking-[.25em] font-barlow-cond text-xl sm:text-[22px] uppercase">welcome to</h3>
             <h1 class="font-gilda text-2xl sm:text-[38px] tracking-[.04em] font-medium py-3 text-white mb-3">CrystalFall Hotel</h1>
@@ -273,7 +274,6 @@
             <a href="#" class="bg-lion font-barlow px-4 min-w-[158px] min-h-[48px] inline-flex items-center justify-center uppercase text-white transition duration-300 ease-in-out hover:bg-lion-dark mt-8 tracking-widest">know more</a>
             </div>
             
-            <!-- Gallery Grid -->
             <div class="grid grid-cols-3 gap-4">
             <img class="w-full h-[425px] flex-shrink-0 w-full object-cover cursor-pointer popup-img rounded-md shadow-lg" src="../assets/images/htl1.png" alt="Image 2">
             <img class="w-full h-[425px] flex-shrink-0 w-full object-cover cursor-pointer popup-img rounded-md shadow-lg" src="../assets/images/wlc4.png" alt="Image 2">
@@ -283,7 +283,6 @@
         </div>
         </section>
 
-        <!-- ====== Lightbox Popup ====== -->
         <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden z-50">
         <span id="close-lightbox" class="absolute top-5 right-5 text-white text-3xl cursor-pointer">&times;</span>
         <button id="prev-btn" class="absolute left-5 text-white text-4xl cursor-pointer">&larr;</button>
@@ -291,7 +290,6 @@
         <button id="next-btn" class="absolute right-5 text-white text-4xl cursor-pointer">&rarr;</button>
         </div>
 
-        <!-- ====== JS ====== -->
         <script>
         const images = document.querySelectorAll('.popup-img');
         const lightbox = document.getElementById('lightbox');
@@ -302,7 +300,6 @@
 
         let currentIndex = 0;
 
-        // Open lightbox
         images.forEach((img, index) => {
             img.addEventListener('click', () => {
             currentIndex = index;
@@ -311,7 +308,6 @@
             });
         });
 
-        // Close lightbox
         closeBtn.addEventListener('click', () => {
             lightbox.classList.add('hidden');
         });
@@ -320,21 +316,19 @@
             if (e.target === lightbox) lightbox.classList.add('hidden');
         });
 
-        // Next image
         nextBtn.addEventListener('click', e => {
             e.stopPropagation();
             currentIndex = (currentIndex + 1) % images.length;
             lightboxImg.src = images[currentIndex].src;
         });
 
-        // Previous image
+    
         prevBtn.addEventListener('click', e => {
             e.stopPropagation();
             currentIndex = (currentIndex - 1 + images.length) % images.length;
             lightboxImg.src = images[currentIndex].src;
         });
 
-        // Keyboard support
         document.addEventListener('keydown', e => {
             if (!lightbox.classList.contains('hidden')) {
             if (e.key === 'ArrowRight') nextBtn.click();
@@ -357,7 +351,8 @@
         </section>
         
         <section class = "py-16 px-3">
-            <div class="container max-w-[1200px] mx-auto">
+
+                <div class="container max-w-[1200px] mx-auto">
                 <h2 class = "font-gilda font-normal text-3xl sm:text-[46px] tracking-[.04em] text-coyote text-center mb-3">Rooms & Suites</h2>
                 <div class="flex items-center justify-center">
                     <img src = "../assets/images/decorated-pattern-2.svg" alt = "">
@@ -381,25 +376,139 @@
                     </ul>
                 </div>
 
-                <div class = "grid sm:grid-cols-2 lg:grid-cols-3 gap-[4px]">
-                    <a href = "#" class = "object-cover relative after:absolute after:content-[''] after:top-0 after:left-0 after:w-full after:h-full after:bg-gradient-to-b from-black/25 to-black/75 hover:before  before:absolute before:content-[''] before:top-3 before:left-3 before:right-3 before:bottom-3 before:border-white before:border-2 before:border-solid before:z-10 before:opacity-0 hover:before:opacity-100 before:transition before:duration-300 before:ease-in-out">
-                        <img src = "../assets/images/wlc5.png" class = "w-full h-full object-cover" alt = "">
-                        <div class = "absolute bottom-0 left-2/4 -translate-x-2/4 text-white font-medium uppercase text-xl md:text-2xl font-barlow z-10 px-4 mb-14 text-center w-full tracking-widest">suprior bed room</div>
-                        </class>
-                    </a>
 
-                    <a href = "#" class = "object-cover relative after:absolute after:content-[''] after:top-0 after:left-0 after:w-full after:h-full after:bg-gradient-to-b from-black/25 to-black/75 hover:before  before:absolute before:content-[''] before:top-3 before:left-3 before:right-3 before:bottom-3 before:border-white before:border-2 before:border-solid before:z-10 before:opacity-0 hover:before:opacity-100 before:transition before:duration-300 before:ease-in-out">
-                        <img src = "../assets/images/wlc2.png" class = "w-full h-full object-cover" alt = "">
-                        <div class = "absolute bottom-0 left-2/4 -translate-x-2/4 text-white font-medium uppercase text-xl md:text-2xl font-barlow z-10 px-4 mb-14 text-center w-full tracking-widest">Queen Size Bed</div>
-                    </a>
-
-                    <a href = "#" class = "object-cover relative after:absolute after:content-[''] after:top-0 after:left-0 after:w-full after:h-full after:bg-gradient-to-b from-black/25 to-black/75 hover:before  before:absolute before:content-[''] before:top-3 before:left-3 before:right-3 before:bottom-3 before:border-white before:border-2 before:border-solid before:z-10 before:opacity-0 hover:before:opacity-100 before:transition before:duration-300 before:ease-in-out">
-                        <img src = "../assets/images/bed.jpg" class = "w-full h-full object-cover" alt = "">
-                        <div class = "absolute bottom-0 left-2/4 -translate-x-2/4 text-white font-medium uppercase text-xl md:text-2xl font-barlow z-10 px-4 mb-14 text-center w-full tracking-widest">Delux Family Rooms</div>
-                    </a>
-                </div>
             </div>
+
+        <div class="max-w-7xl mx-auto px-4 py-12">
+            
+        <h2 class="font-gilda font-normal text-3xl sm:text-[46px] tracking-[.04em] text-coyote text-center mb-3">
+            The Best <span class="text-white">Prices</span>
+        </h2>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- ROOM 1 -->
+                <div class="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition">
+
+
+                    <!-- LARGE IMAGE -->
+                    <img 
+                        src="../assets/images/wlc2.png"
+                        alt="Deluxe Mountain View Room"
+                        class="w-full h-[360px] object-cover"
+                    >
+
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-eerie-black">
+                            Deluxe Mountain View
+                        </h3>
+
+                        <p class="text-sm text-gray-500 mt-2 leading-relaxed">
+                            Wake up to panoramic Himalayan views from your private balcony,
+                            designed for comfort and calm.
+                        </p>
+
+                        <div class="mt-5 flex items-center justify-between">
+                            <span class="text-lion text-xl font-semibold">
+                                $75 <span class="text-sm text-gray-400 font-normal">/ night</span>
+                            </span>
+
+                            <a href="#" class="text-sm uppercase tracking-widest text-lion hover:underline font-bold" onclick="openBooking()">
+                                Reserve Now
+                            </a>
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+                <!-- ROOM 2 -->
+                <div class="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition">
+
+                    <img 
+                        src="../assets/images/wlc5.png"
+                        alt="Premium Garden Suite"
+                        class="w-full h-[360px] object-cover"
+                    >
+
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-eerie-black">
+                            Premium Garden Suite
+                        </h3>
+
+                        <p class="text-sm text-gray-500 mt-2 leading-relaxed">
+                            Elegant interiors paired with lush garden surroundings,
+                            perfect for a quiet and relaxing stay.
+                        </p>
+
+                        <div class="mt-5 flex items-center justify-between">
+                            <span class="text-lion text-xl font-semibold">
+                                $95 <span class="text-sm text-gray-400 font-normal">/ night</span>
+                            </span>
+                            <a href="#" class="text-sm uppercase tracking-widest text-lion hover:underline font-bold" onclick="openBooking()">
+                                Reserve Now
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROOM 3 -->
+                <div class="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition">
+
+                    <img 
+                        src="../assets/images/bed.jpg"
+                        alt="Executive Suite"
+                        class="w-full h-[360px] object-cover"
+                    >
+
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-eerie-black">
+                            Executive Suite
+                        </h3>
+
+                        <p class="text-sm text-gray-500 mt-2 leading-relaxed">
+                            A refined space featuring premium amenities,
+                            lounge access, and thoughtfully designed luxury.
+                        </p>
+
+                        <div class="mt-5 flex items-center justify-between">
+                            <span class="text-lion text-xl font-semibold">
+                                $120 <span class="text-sm text-gray-400 font-normal">/ night</span>
+                            </span>
+
+                            <a href="#" class="text-sm uppercase tracking-widest text-lion hover:underline font-bold" onclick="openBooking()">
+                                Reserve Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
         </section>
+        <script>
+        function openBooking() {
+        // Pick mobile or desktop date values
+        const checkin = document.getElementById('checkin')?.value || document.getElementById('checkinDesktop')?.value;
+        const checkout = document.getElementById('checkout')?.value || document.getElementById('checkoutDesktop')?.value;
+
+        // Adults / Children / Rooms
+        const adults = document.getElementById('adult')?.value || 1;
+        const children = document.getElementById('children')?.value || 0;
+        const rooms = document.getElementById('rooms')?.value.replace(' room','') || 1;
+
+        // Construct Booking.com URL
+        let url = `https://www.booking.com/hotel/np/crystal-fall-pokhara2.html?checkin=${checkin}&checkout=${checkout}&group_adults=${adults}&group_children=${children}&no_rooms=${rooms}`;
+
+        // Open Booking.com in new tab
+        window.open(url, '_blank');
+        }
+        </script>
 
 
 
@@ -486,7 +595,6 @@
 
         <section class="py-20 px-3 bg-gradient-to-b from-white to-gray-100">
         <div class="container max-w-[1200px] mx-auto">
-            <!-- Section Header -->
             <h2 class="font-gilda font-normal text-3xl sm:text-[46px] tracking-[.04em] text-coyote text-center mb-3">
             Events
             </h2>
@@ -496,10 +604,8 @@
 
 
 
-            <!-- Event Grid -->
             <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 
-            <!-- Event Card 1 -->
             <div class="relative h-[450px] overflow-hidden rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
                 onclick="document.getElementById('event-modal-1').classList.remove('hidden')">
                 <img src="../assets/images/events-1.png" alt="Lakeside Acoustic Evenings at CrystalFall Hotel" class="w-full h-full object-cover">
@@ -509,7 +615,6 @@
                 </div>
             </div>
 
-            <!-- Event Card 2 -->
             <div class="relative h-[450px] overflow-hidden rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
                 onclick="document.getElementById('event-modal-2').classList.remove('hidden')">
                 <img src="../assets/images/events-2.png" alt="Full Moon Dinner by the Lake at CrystalFall Hotel" class="w-full h-full object-cover">
@@ -519,7 +624,6 @@
                 </div>
             </div>
 
-            <!-- Event Card 3 -->
             <div class="relative h-[450px] overflow-hidden rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
                 onclick="document.getElementById('event-modal-3').classList.remove('hidden')">
                 <img src="../assets/images/events-3.png" alt="Annapurna Sunrise Breakfast at CrystalFall Hotel" class="w-full h-full object-cover">
@@ -533,9 +637,7 @@
         </div>
         </section>
 
-        <!-- Event Modals -->
-
-            <!-- Modal 1 -->
+    
             <div id="event-modal-1" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
             <div class="bg-white p-8 max-w-2xl rounded-md relative overflow-y-auto max-h-[90vh]">
                 <button onclick="document.getElementById('event-modal-1').classList.add('hidden')" 
